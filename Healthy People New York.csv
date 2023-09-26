@@ -1,4 +1,5 @@
-﻿2021,NY,New York,Saratoga,BRFSS,Health Outcomes,Stroke among adults aged >=18 years,%,Crude prevalence,2.7,,,2.3,3.1,"237,359",36091,HLTHOUT,STROKE,CrdPrv,Stroke,POINT (-73.8553872 43.1061353)
+﻿Year,StateAbbr,StateDesc,LocationName,DataSource,Category,Measure,Data_Value_Unit,Data_Value_Type,Data_Value,Data_Value_Footnote_Symbol,Data_Value_Footnote,Low_Confidence_Limit,High_Confidence_Limit,TotalPopulation,LocationID,CategoryID,MeasureId,DataValueTypeID,Short_Question_Text,Geolocation
+2021,NY,New York,Saratoga,BRFSS,Health Outcomes,Stroke among adults aged >=18 years,%,Crude prevalence,2.7,,,2.3,3.1,"237,359",36091,HLTHOUT,STROKE,CrdPrv,Stroke,POINT (-73.8553872 43.1061353)
 2021,NY,New York,Lewis,BRFSS,Health Outcomes,Obesity among adults aged >=18 years,%,Crude prevalence,43.2,,,38.5,48.2,"26,573",36049,HLTHOUT,OBESITY,CrdPrv,Obesity,POINT (-75.4441402 43.7826811)
 2020,NY,New York,Oswego,BRFSS,Prevention,Visits to dentist or dental clinic among adults aged >=18 years,%,Crude prevalence,62.2,,,58.2,66.1,"117,387",36075,PREVENT,DENTAL,CrdPrv,Dental Visit,POINT (-76.2092618 43.4614431)
 2021,NY,New York,Hamilton,BRFSS,Health Outcomes,Obesity among adults aged >=18 years,%,Crude prevalence,31.8,,,27.1,36.5,"5,119",36041,HLTHOUT,OBESITY,CrdPrv,Obesity,POINT (-74.5024556 43.6578786)
