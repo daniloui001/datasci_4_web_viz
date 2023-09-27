@@ -1,0 +1,32 @@
+from shiny import App, ui, render
+import pandas as pd
+import matplotlib.pyplot as plt
+
+newyork = pd.read_csv("https://raw.githubusercontent.com/daniloui001/datasci_4_web_viz/main/Healthy%20People%20New%20York.csv")
+alabama = pd.read_csv("https://raw.githubusercontent.com/daniloui001/datasci_4_web_viz/main/Healthy%20People%20Alabama.csv")
+
+app_ui = ui.page_fluid(
+    ui.panel_title("Population by Data Value"),
+    
+    ui.layout_sidebar(
+        ui.panel_sidebar(
+            ui.input_select("filter1", "Select Location: ", choices = ("All", (newyork['LocationName']))),
+            ui.input_slider("population_filter", "Filter by Population:",
+                        min = 0, max = max(alabama['Data_value'], value = (0, max(alabama['Data_value'])))
+        )),
+        
+        ui.panel_main(
+            ui.output_plot("bar_chart")
+        )
+    )
+)
+def server(input, output, session):
+    @output
+    @render.plot
+    def plot():
+        fig, ax = plt.subplots()
+        im = ax.imshow(newyork, cmap=input.cmap(), vmin=input.range()[0], vmax=input.range()[1])
+        fig.colorbar(im, ax=ax)
+        return fig
+
+app = App(app_ui, server)
